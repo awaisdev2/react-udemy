@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Routes>
          <Route path="/" element={<Nav />} />
         </Routes>
+        <Hero />
       </BrowserRouter>
     </>
   );
