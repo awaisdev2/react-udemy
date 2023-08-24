@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import { useState } from "react";
-import './Components.css'
+import "./Components.css";
 
 export default function Nav() {
   const logo = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg";
 
   return (
     <div>
-      <nav className="bg-white shadow-lg border-gray-200">
-        <div className="max-w-screen-xl flex justify-center items-center p-4">
+      <nav className="bg-white shadow-xl border-gray-200">
+        <div className="max-w-screen-xl flex justify-center items-center p-2">
           <Link to="/" className="flex items-center">
             <img src={logo} className="h-8 mr-3" alt="Flowbite Logo" />
           </Link>
@@ -44,7 +44,7 @@ export default function Nav() {
                   id="dropdownHoverButton"
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
-                  className="flex items-center justify-between w-full mx-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
+                  className="flex items-center text-sm justify-between w-full mx-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
                 >
                   Dropdown
                 </button>
@@ -489,7 +489,7 @@ export default function Nav() {
               <li>
                 <Link
                   to=""
-                  className="block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  className="text-sm block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   Udemy Business
                 </Link>
@@ -497,7 +497,7 @@ export default function Nav() {
               <li>
                 <Link
                   to=""
-                  className="block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  className="text-sm block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   Tech on Udemy
                 </Link>
@@ -505,7 +505,7 @@ export default function Nav() {
               <li>
                 <Link
                   to=""
-                  className="block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  className="text-sm block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
@@ -541,7 +541,12 @@ export default function Nav() {
                   Sign up
                 </button>
               </li>
-              <li style={{border: '1px solid black'}} className="p-2 my-2 cursor-pointer">
+              <li
+                style={{ border: "1px solid black" }}
+                data-modal-target="popup-modal"
+                data-modal-toggle="popup-modal"
+                className="p-2 my-2 cursor-pointer"
+              >
                 <svg
                   className="w-6 h-6 text-gray-800"
                   aria-hidden="true"
@@ -557,6 +562,68 @@ export default function Nav() {
                     d="M6.487 1.746c0 4.192 3.592 1.66 4.592 5.754 0 .828 1 1.5 2 1.5s2-.672 2-1.5a1.5 1.5 0 0 1 1.5-1.5h1.5m-16.02.471c4.02 2.248 1.776 4.216 4.878 5.645C10.18 13.61 9 19 9 19m9.366-6h-2.287a3 3 0 0 0-3 3v2m6-8a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>
+                <div
+                  id="popup-modal"
+                  tabindex="-1"
+                  class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                >
+                  <div class="relative max-h-full">
+                    <div class="relative bg-white rounded-lg shadow">
+                      <button
+                        type="button"
+                        class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="popup-modal"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 14 14"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                          />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                      </button>
+                      <div class="p-6 text-center">
+                        <div>
+                          <div className="flex">
+                            <div className="flex px-5 flex-col">
+                              <p style={{ margin: "10px" }}>English</p>
+                              <p style={{ margin: "10px" }}>Deutsch</p>
+                              <p style={{ margin: "10px" }}>Español</p>
+                              <p style={{ margin: "10px" }}>Français</p>
+                              <p style={{ margin: "10px" }}>Bahasa Indonesia</p>
+                              <p style={{ margin: "10px" }}>Italiano</p>
+                            </div>
+                            <div className="flex px-5 flex-col">
+                              <p style={{ margin: "10px" }}>日本語</p>
+                              <p style={{ margin: "10px" }}>한국어</p>
+                              <p style={{ margin: "10px" }}>Nederlands</p>
+                              <p style={{ margin: "10px" }}>Polski</p>
+                              <p style={{ margin: "10px" }}>Português</p>
+                              <p style={{ margin: "10px" }}>Română</p>
+                            </div>
+                            <div className="flex px-5 flex-col">
+                              <p style={{ margin: "10px" }}>Русский</p>
+                              <p style={{ margin: "10px" }}>ภาษาไทย</p>
+                              <p style={{ margin: "10px" }}>Türkçe</p>
+                              <p style={{ margin: "10px" }}>Tiếng Việt</p>
+                              <p style={{ margin: "10px" }}>中文简体</p>
+                              <p style={{ margin: "10px" }}>中文繁體</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
