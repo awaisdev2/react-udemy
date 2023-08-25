@@ -78,7 +78,7 @@ export default function Footer() {
             <img style={{height: '40px'}} src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="footer-img" />
         </span>
         <div>
-       <p className='text-md text-gray-300'> © 2023 Udemy, Inc.</p>
+       <p className='text-sm text-gray-300'> © 2023 Udemy, Inc.</p>
         </div>
       </div>
     </div>

@@ -3,7 +3,8 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import CourseIndex from "./components/courses/CourseIndex";
 import Instructor from "./components/Instructor";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
+import Reviewers from "./components/Reviewers";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         </Routes>
         <Hero />
         <CourseIndex />
+        <Reviewers />
         <Instructor />
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );

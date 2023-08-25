@@ -4,7 +4,7 @@ export default function Instructor() {
   return (
     <div className='flex flex-wrap my-8 justify-center items-center'>
       <div>
-        <img className='w-96' src="https://s.udemycdn.com/home/non-student-cta/instructor-2x-v3.jpg" alt="instructor-img" />
+        <img className='w-96 my-2 mr-2' src="https://s.udemycdn.com/home/non-student-cta/instructor-2x-v3.jpg" alt="instructor-img" />
       </div>
       <div className='mx-8'>
         <h1 className='text-3xl font-bold'>Become an instructor</h1>
