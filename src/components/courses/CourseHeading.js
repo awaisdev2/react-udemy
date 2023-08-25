@@ -15,6 +15,22 @@ export default function CourseHeading(props) {
       <h1 className='text-2xl font-bold'>{props.webTitle}</h1>
       <p className='max-w-xl my-2 text-sm'>{props.webSub}</p>
       </div>
+      <div className='js'>
+      <h1 className='text-2xl font-bold'>{props.jsTitle}</h1>
+      <p className='max-w-xl my-2 text-sm'>{props.jsSub}</p>
+      </div>
+      <div className='ds'>
+      <h1 className='text-2xl font-bold'>{props.dsTitle}</h1>
+      <p className='max-w-xl my-2 text-sm'>{props.dsSub}</p>
+      </div>
+      <div className='aws'>
+      <h1 className='text-2xl font-bold'>{props.awsTitle}</h1>
+      <p className='max-w-xl my-2 text-sm'>{props.awsSub}</p>
+      </div>
+      <div className='drawing'>
+      <h1 className='text-2xl font-bold'>{props.drawingTitle}</h1>
+      <p className='max-w-xl my-2 text-sm'>{props.drawingSub}</p>
+      </div>
     </>
   )
 }
