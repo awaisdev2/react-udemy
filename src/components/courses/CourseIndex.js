@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import React from "react";
 import "../../index.css";
@@ -65,6 +66,82 @@ export default function CourseIndex() {
     },
   ];
 
+  const excelCourses = [
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/793796_0e89_2.jpg",
+      title: "Microsoft Excel - Excel from Beginner to Advanced",
+      author: "Kyle Pew, Office Newb",
+      downloads: "(475,170)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/2605732_e3d5_3.jpg",
+      title: "Zero to Hero in Microsoft Excel: Complete Excel guide 2023",
+      author: "Start-Tech Academy",
+      downloads: "(108,867)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/2070737_3af1_4.jpg",
+      title: "Microsoft Excel Weekender Crash Course",
+      author: "Start-Tech Academy",
+      downloads: "(173,867)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/3011572_33ad_2.jpg",
+      title: "Microsoft Excel - Learn MS EXCEL For DATA Analysis",
+      author: "Yassin Marco",
+      downloads: "(225,544)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/240x135/3338560_f31f.jpg",
+      title: "Microsoft Excel -Basic Excel/ Advanced Excel Formulas",
+      author: "Yassin Marco",
+      downloads: "(13,444)",
+      price: "$9.99",
+    },
+  ];
+
+  const webCourses = [
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/1565838_e54e_16.jpg",
+      title: "The Complete 2023 Web Development Bootcamp",
+      author: "Dr. Angela Yu",
+      downloads: "(475,170)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/240x135/625204_436a_3.jpg",
+      title: "The Web Developer Bootcamp 2023",
+      author: "Colt Steele",
+      downloads: "(108,867)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/240x135/965528_737d_7.jpg",
+      title: "Web Development Masterclass - Online Certification Course",
+      author: "YouAccel Training",
+      downloads: "(173,867)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/240x135/764164_de03_5.jpg",
+      title: "The Complete Web Developer Course 3.0",
+      author: "YRob Percival, Codestars • over 2 million students worldwide!",
+      downloads: "(225,544)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/240x135/1430746_2f43_10.jpg",
+      title: "The Complete Web Developer in 2023: Zero to Mastery",
+      author: "Andrei Neagoie",
+      downloads: "(13,444)",
+      price: "$9.99",
+    },
+  ];
+
   const startIndex = (currentPage - 1) * coursesPerPage;
   const endIndex = startIndex + coursesPerPage;
 
@@ -75,6 +152,15 @@ export default function CourseIndex() {
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
   };
+
+  const [showExcel, setShowExcel] = useState(false);
+  const [showPython, setShowPython] = useState(true);
+  const [showWeb, setShowWeb] = useState(false);
+  const [showJs, setShowJs] = useState(false);
+  const [showDs, setShowDs] = useState(false);
+  const [showAmazon, setShowAmazon] = useState(false);
+  const [showDrawing, setShowDrawing] = useState(false);
+
   return (
     <div style={{ margin: "15px 15px" }}>
       <div className="mx-2 mb-3 mt-20">
@@ -87,38 +173,106 @@ export default function CourseIndex() {
         </p>
       </div>
       <div className="flex flex-wrap">
-        <p className="mx-2 font-semibold courses cursor-pointer">Python</p>
         <p
-          style={{ color: "#2d2f31", fontSize: "16px" }}
+          onClick={() => {
+            setShowExcel(false);
+            setShowPython(true);
+            setShowWeb(false);
+            setShowAmazon(false);
+            setShowJs(false);
+            setShowDs(false);
+            setShowDrawing(false);
+          }}
+          style={{ fontSize: "16px" }}
           className="mx-2 font-semibold courses cursor-pointer"
+        >
+          Python
+        </p>
+        <p
+          onClick={() => {
+            setShowExcel(true);
+            setShowPython(false);
+            setShowWeb(false);
+            setShowAmazon(false);
+            setShowJs(false);
+            setShowDs(false);
+            setShowDrawing(false);
+          }}
+          style={{ color: "#2d2f31", fontSize: "16px" }}
+          className="mx-2 excel-title font-semibold courses cursor-pointer"
         >
           Excel
         </p>
         <p
+          onClick={() => {
+            setShowExcel(false);
+            setShowPython(false);
+            setShowWeb(true);
+            setShowAmazon(false);
+            setShowJs(false);
+            setShowDs(false);
+            setShowDrawing(false);
+          }}
           style={{ color: "#2d2f31", fontSize: "16px" }}
           className="mx-2 text-center font-semibold courses cursor-pointer"
         >
           Web <span>Development</span>
         </p>
         <p
+          onClick={() => {
+            setShowExcel(false);
+            setShowPython(false);
+            setShowWeb(false);
+            setShowAmazon(false);
+            setShowJs(true);
+            setShowDs(false);
+            setShowDrawing(false);
+          }}
           style={{ color: "#2d2f31", fontSize: "16px" }}
           className="mx-2 font-semibold courses cursor-pointer"
         >
           Javascript
         </p>
         <p
+          onClick={() => {
+            setShowExcel(false);
+            setShowPython(false);
+            setShowWeb(false);
+            setShowAmazon(false);
+            setShowJs(false);
+            setShowDs(true);
+            setShowDrawing(false);
+          }}
           style={{ color: "#2d2f31", fontSize: "16px" }}
           className="mx-2 text-center font-semibold courses cursor-pointer"
         >
           Data <span>Science</span>
         </p>
         <p
+          onClick={() => {
+            setShowExcel(false);
+            setShowPython(false);
+            setShowWeb(false);
+            setShowAmazon(true);
+            setShowJs(false);
+            setShowDs(false);
+            setShowDrawing(false);
+          }}
           style={{ color: "#2d2f31", fontSize: "16px" }}
           className="mx-2 text-center font-semibold courses cursor-pointer"
         >
           Amazon <span>AWS</span>
         </p>
         <p
+          onClick={() => {
+            setShowExcel(false);
+            setShowPython(false);
+            setShowWeb(false);
+            setShowAmazon(false);
+            setShowJs(false);
+            setShowDs(false);
+            setShowDrawing(true);
+          }}
           style={{ color: "#2d2f31", fontSize: "16px" }}
           className="mx-2 font-semibold courses cursor-pointer"
         >
@@ -126,15 +280,92 @@ export default function CourseIndex() {
         </p>
       </div>
       <div className="border w-fit m-2 py-2 px-4">
-        <div className="python-section">
-          <div className="python-cards my-2">
-            <div className="mx-2">
-              <CourseHeading
-                pythonTitle="Expand your career opportunities with Python"
-                pythonSub="Take one of Udemys range of Python courses and learn how to code using this incredibly useful language Its simple syntax and readability makes Python perfect for Flask Django data science and machine learning Youll learn how to build everything from games to sites to apps Choose from a range of courses that will appeal to both beginners and advanced developers alike"
-                cardLang="Python"
-              />
+        {showPython && (
+          <div className="python-section">
+            <div className="python-cards my-2">
+              <div className="mx-2">
+                <CourseHeading
+                  pythonTitle="Expand your career opportunities with Python"
+                  pythonSub="Take one of Udemys range of Python courses and learn how to code using this incredibly useful language Its simple syntax and readability makes Python perfect for Flask Django data science and machine learning Youll learn how to build everything from games to sites to apps Choose from a range of courses that will appeal to both beginners and advanced developers alike"
+                />
+                <button className="border hover:bg-gray-200 mb-3 border-black p-2">
+                  Explore Python
+                </button>
+              </div>
+              <div className="flex justify-center">
+                {currentPage > 1 && (
+                  <button
+                    onClick={handlePreviousPage}
+                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    style={{ borderRadius: "50%", height: "40px" }}
+                  >
+                    <svg
+                      className="w-6 h-6 text-gray-200"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 8 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
+                      />
+                    </svg>
+                  </button>
+                )}
+                {pythonCourses
+                  .slice(startIndex, endIndex)
+                  .map((course, index) => (
+                    <CourseCard
+                      key={index}
+                      imgSrc={course.imgSrc}
+                      title={course.title}
+                      author={course.author}
+                      downloads={course.downloads}
+                      price={course.price}
+                    />
+                  ))}
+                {endIndex < pythonCourses.length && (
+                  <button
+                    onClick={handleNextPage}
+                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    style={{ borderRadius: "50%", height: "40px" }}
+                  >
+                    <svg
+                      className="w-6 h-6 text-gray-200"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 8 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                      />
+                    </svg>
+                  </button>
+                )}
+              </div>
             </div>
+          </div>
+        )}
+        {showExcel && (
+          <div className="excel-section">
+           <div className="mx-2">
+           <CourseHeading
+              excelTitle="Analyze and visualize data with Excel"
+              excelSub="Take a Microsoft Excel course from Udemy, and learn how to use this industry-standard software. Real-world experts will show you the basics like how to organize data into sheets, rows and columns, and advanced techniques like creating complex dynamic formulas. Both small businesses and large companies use Excel to turn their raw data into actionable insights."
+            />
+            <button className="border hover:bg-gray-200 mb-3 border-black p-2">
+              Explore Excel
+            </button>
+           </div>
             <div className="flex justify-center">
               {currentPage > 1 && (
                 <button
@@ -159,19 +390,17 @@ export default function CourseIndex() {
                   </svg>
                 </button>
               )}
-              {pythonCourses
-                .slice(startIndex, endIndex)
-                .map((course, index) => (
-                  <CourseCard
-                    key={index}
-                    imgSrc={course.imgSrc}
-                    title={course.title}
-                    author={course.author}
-                    downloads={course.downloads}
-                    price={course.price}
-                  />
-                ))}
-              {endIndex < pythonCourses.length && (
+              {excelCourses.slice(startIndex, endIndex).map((courses, i) => (
+                <CourseCard
+                  key={i}
+                  imgSrc={courses.imgSrc}
+                  title={courses.title}
+                  author={courses.author}
+                  downloads={courses.downloads}
+                  price={courses.price}
+                />
+              ))}
+              {endIndex < excelCourses.length && (
                 <button
                   onClick={handleNextPage}
                   className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
@@ -195,17 +424,81 @@ export default function CourseIndex() {
                 </button>
               )}
             </div>
-            {/* Next and Previous buttons */}
-            {/* <div className="flex justify-between mt-3">
-              {currentPage > 1 && (
-                <button onClick={handlePreviousPage}>Previous</button>
-              )}
-              {endIndex < pythonCourses.length && (
-                <button style={{borderRadius: '50%'}} className="bg-black py-3 px-2 hover:bg-slate-800 text-white" onClick={handleNextPage}>Next</button>
-              )}
-            </div> */}
           </div>
-        </div>
+        )}
+        {showWeb && (
+          <div className="web-section">
+            <div className="web-cards my-2">
+              <div className="mx-2">
+                <CourseHeading
+                  webTitle="Build websites and applications with Web Development"
+                  webSub="The world of web development is as wide as the internet itself. Much of our social and vocational lives play out on the internet, which prompts new industries aimed at creating, managing, and debugging the websites and applications that we increasingly rely on."
+                />
+                <button className="border hover:bg-gray-200 mb-3 border-black p-2">
+                  Explore Web Development
+                </button>
+              </div>
+              <div className="flex justify-center">
+                {currentPage > 1 && (
+                  <button
+                    onClick={handlePreviousPage}
+                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    style={{ borderRadius: "50%", height: "40px" }}
+                  >
+                    <svg
+                      className="w-6 h-6 text-gray-200"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 8 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
+                      />
+                    </svg>
+                  </button>
+                )}
+                {webCourses.slice(startIndex, endIndex).map((courses, i) => (
+                  <CourseCard
+                    key={i}
+                    imgSrc={courses.imgSrc}
+                    title={courses.title}
+                    author={courses.author}
+                    downloads={courses.downloads}
+                    price={courses.price}
+                  />
+                ))}
+                {endIndex < webCourses.length && (
+                  <button
+                    onClick={handleNextPage}
+                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    style={{ borderRadius: "50%", height: "40px" }}
+                  >
+                    <svg
+                      className="w-6 h-6 text-gray-200"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 8 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                      />
+                    </svg>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

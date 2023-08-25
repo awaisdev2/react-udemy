@@ -62,7 +62,7 @@ export default function CourseCard(props) {
 
   return (
     <div style={{ maxWidth: '250px' }} className="mx-2">
-      <img className="border" src={props.imgSrc} alt="card-image" />
+      <img style={{height: '50%', width: '100%'}} className="border" src={props.imgSrc} alt="card-image" />
       <div>
         <p className="font-bold">{renderText()}</p>
         <p className="text-sm">{renderAuthor()}</p>
