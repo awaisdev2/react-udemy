@@ -1,0 +1,11 @@
+@media (max-width: 1023px) {
+    .nav{
+        justify-content: space-between !important;
+    }
+}
+
+@media (min-width: 1500px) {
+    .nav{
+        justify-content: space-between !important;
+    }
+}

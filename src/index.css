@@ -19,3 +19,9 @@ code {
 .title{
   font-family: 'Ubuntu';
 }
+
+@media (max-width: 530px) {
+  .courses{
+    font-size: smaller !important;
+  }
+}

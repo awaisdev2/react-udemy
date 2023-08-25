@@ -9,7 +9,7 @@ export default function Nav() {
   return (
     <div>
       <nav className="bg-white shadow-xl border-gray-200">
-        <div className="max-w-screen-xl flex justify-center items-center p-2">
+        <div className="max-w-screen-2xl flex justify-center flex-wrap p-1 nav items-center">
           <Link to="/" className="flex items-center">
             <img src={logo} className="h-8 mr-3" alt="Flowbite Logo" />
           </Link>
@@ -46,7 +46,7 @@ export default function Nav() {
                   data-dropdown-trigger="hover"
                   className="flex items-center text-sm justify-between w-full mx-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
                 >
-                  Dropdown
+                  Categories
                 </button>
                 <div
                   id="dropdownHover"
@@ -449,7 +449,7 @@ export default function Nav() {
                 </div>
               </li>
               <li>
-                <Link to="/" className="block mr-3 my-2 w-3/4">
+                <Link to="/" className="block mx-3 my-2 w-full">
                   <form>
                     <label
                       for="default-search"
@@ -478,7 +478,8 @@ export default function Nav() {
                       <input
                         type="search"
                         id="default-search"
-                        className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                        style={{width: '320px'}}
+                        className="block py-3 px-4 pl-10 text-sm text-gray-900 border border-gray-900 rounded-full bg-gray-50 focus:outline-none"
                         placeholder="Search for anything"
                         required
                       />
@@ -489,10 +490,17 @@ export default function Nav() {
               <li>
                 <Link
                   to=""
+                  data-tooltip-target="tooltip-no-arrow"
                   className="text-sm block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   Udemy Business
                 </Link>
+                <div id="tooltip-no-arrow" role="tooltip" className="absolute max-w-sm z-10 invisible inline-block px-3 py-2 text-lg font-bold text-black bg-white rounded-lg shadow-sm opacity-0 tooltip">
+                   <div className="text-center">
+                    <h1>Get your team access to over 22,000 top Udemy courses, anytime, anywhere.</h1>
+                    <button className="bg-black my-2 p-2 text-white hover:bg-slate-800">Try Udemy Business</button>
+                   </div>
+                </div>
               </li>
               <li>
                 <Link
@@ -508,7 +516,7 @@ export default function Nav() {
                   className="text-sm block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   <svg
-                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-6 h-6 text-gray-800"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -526,11 +534,7 @@ export default function Nav() {
               </li>
               <li>
                 <button
-                  style={{
-                    backgroundColor: "white",
-                    border: "1px solid black",
-                  }}
-                  className="px-4 my-2 py-2"
+                  className="border hover:bg-gray-200 border-black px-4 my-2 py-2"
                 >
                   Log in
                 </button>
@@ -565,17 +569,17 @@ export default function Nav() {
                 <div
                   id="popup-modal"
                   tabindex="-1"
-                  class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                  className="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
                 >
-                  <div class="relative max-h-full">
-                    <div class="relative bg-white rounded-lg shadow">
+                  <div className="relative max-h-full">
+                    <div className="relative bg-white rounded-lg shadow">
                       <button
                         type="button"
-                        class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                         data-modal-hide="popup-modal"
                       >
                         <svg
-                          class="w-3 h-3"
+                          className="w-3 h-3"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -589,9 +593,9 @@ export default function Nav() {
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
                           />
                         </svg>
-                        <span class="sr-only">Close modal</span>
+                        <span className="sr-only">Close modal</span>
                       </button>
-                      <div class="p-6 text-center">
+                      <div className="p-6 text-center">
                         <div>
                           <div className="flex">
                             <div className="flex px-5 flex-col">
