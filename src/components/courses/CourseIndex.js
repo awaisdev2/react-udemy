@@ -29,6 +29,14 @@ export default function CourseIndex() {
 
   const pythonCourses = [
     {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
+      title: "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]",
+      author:
+        "Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team, Ligency Team",
+      downloads: "(173,867)",
+      price: "$9.99",
+    },
+    {
       imgSrc: "https://img-c.udemycdn.com/course/480x270/567828_67d0.jpg",
       title: "The Complete Python Bootcamp From Zero to Hero in Python",
       author: "Jose Portilla",
@@ -64,6 +72,14 @@ export default function CourseIndex() {
       downloads: "(13,444)",
       price: "$9.99",
     },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
+      title: "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]",
+      author:
+        "Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team, Ligency Team",
+      downloads: "(173,867)",
+      price: "$9.99",
+    },
   ];
 
   const excelCourses = [
@@ -89,6 +105,14 @@ export default function CourseIndex() {
       price: "$9.99",
     },
     {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
+      title: "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]",
+      author:
+        "Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team, Ligency Team",
+      downloads: "(173,867)",
+      price: "$9.99",
+    },
+    {
       imgSrc: "https://img-c.udemycdn.com/course/480x270/3011572_33ad_2.jpg",
       title: "Microsoft Excel - Learn MS EXCEL For DATA Analysis",
       author: "Yassin Marco",
@@ -100,6 +124,14 @@ export default function CourseIndex() {
       title: "Microsoft Excel -Basic Excel/ Advanced Excel Formulas",
       author: "Yassin Marco",
       downloads: "(13,444)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
+      title: "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]",
+      author:
+        "Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team, Ligency Team",
+      downloads: "(173,867)",
       price: "$9.99",
     },
   ];
@@ -127,6 +159,14 @@ export default function CourseIndex() {
       price: "$9.99",
     },
     {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
+      title: "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]",
+      author:
+        "Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team, Ligency Team",
+      downloads: "(173,867)",
+      price: "$9.99",
+    },
+    {
       imgSrc: "https://img-c.udemycdn.com/course/240x135/764164_de03_5.jpg",
       title: "The Complete Web Developer Course 3.0",
       author: "YRob Percival, Codestars • over 2 million students worldwide!",
@@ -138,6 +178,13 @@ export default function CourseIndex() {
       title: "The Complete Web Developer in 2023: Zero to Mastery",
       author: "Andrei Neagoie",
       downloads: "(13,444)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/3011572_33ad_2.jpg",
+      title: "Microsoft Excel - Learn MS EXCEL For DATA Analysis",
+      author: "Yassin Marco",
+      downloads: "(225,544)",
       price: "$9.99",
     },
   ];
@@ -155,6 +202,14 @@ export default function CourseIndex() {
       title: "The Web Developer Bootcamp 2023",
       author: "Colt Steele",
       downloads: "(108,867)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
+      title: "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]",
+      author:
+        "Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team, Ligency Team",
+      downloads: "(173,867)",
       price: "$9.99",
     },
     {
@@ -176,6 +231,14 @@ export default function CourseIndex() {
       title: "The Complete Web Developer in 2023: Zero to Mastery",
       author: "Andrei Neagoie",
       downloads: "(13,444)",
+      price: "$9.99",
+    },
+    {
+      imgSrc: "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
+      title: "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]",
+      author:
+        "Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team, Ligency Team",
+      downloads: "(173,867)",
       price: "$9.99",
     },
   ];
@@ -334,7 +397,7 @@ export default function CourseIndex() {
                 {currentPage > 1 && (
                   <button
                     onClick={handlePreviousPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
@@ -369,7 +432,7 @@ export default function CourseIndex() {
                 {endIndex < pythonCourses.length && (
                   <button
                     onClick={handleNextPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
@@ -408,7 +471,7 @@ export default function CourseIndex() {
               {currentPage > 1 && (
                 <button
                   onClick={handlePreviousPage}
-                  className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                  className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                   style={{ borderRadius: "50%", height: "40px" }}
                 >
                   <svg
@@ -441,7 +504,7 @@ export default function CourseIndex() {
               {endIndex < excelCourses.length && (
                 <button
                   onClick={handleNextPage}
-                  className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                  className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                   style={{ borderRadius: "50%", height: "40px" }}
                 >
                   <svg
@@ -480,7 +543,7 @@ export default function CourseIndex() {
                 {currentPage > 1 && (
                   <button
                     onClick={handlePreviousPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
@@ -513,7 +576,7 @@ export default function CourseIndex() {
                 {endIndex < webCourses.length && (
                   <button
                     onClick={handleNextPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
@@ -553,7 +616,7 @@ export default function CourseIndex() {
                 {currentPage > 1 && (
                   <button
                     onClick={handlePreviousPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
@@ -573,7 +636,7 @@ export default function CourseIndex() {
                     </svg>
                   </button>
                 )}
-                {pythonCourses
+                {JsCourses
                   .slice(startIndex, endIndex)
                   .map((course, index) => (
                     <CourseCard
@@ -585,10 +648,10 @@ export default function CourseIndex() {
                       price={course.price}
                     />
                   ))}
-                {endIndex < pythonCourses.length && (
+                {endIndex < JsCourses.length && (
                   <button
                     onClick={handleNextPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
@@ -626,7 +689,7 @@ export default function CourseIndex() {
               {currentPage > 1 && (
                 <button
                   onClick={handlePreviousPage}
-                  className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                  className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                   style={{ borderRadius: "50%", height: "40px" }}
                 >
                   <svg
@@ -659,7 +722,7 @@ export default function CourseIndex() {
               {endIndex < excelCourses.length && (
                 <button
                   onClick={handleNextPage}
-                  className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                  className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                   style={{ borderRadius: "50%", height: "40px" }}
                 >
                   <svg
@@ -697,7 +760,7 @@ export default function CourseIndex() {
               {currentPage > 1 && (
                 <button
                   onClick={handlePreviousPage}
-                  className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                  className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                   style={{ borderRadius: "50%", height: "40px" }}
                 >
                   <svg
@@ -730,7 +793,7 @@ export default function CourseIndex() {
               {endIndex < excelCourses.length && (
                 <button
                   onClick={handleNextPage}
-                  className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                  className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                   style={{ borderRadius: "50%", height: "40px" }}
                 >
                   <svg
@@ -768,7 +831,7 @@ export default function CourseIndex() {
                 {currentPage > 1 && (
                   <button
                     onClick={handlePreviousPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
@@ -803,7 +866,7 @@ export default function CourseIndex() {
                 {endIndex < pythonCourses.length && (
                   <button
                     onClick={handleNextPage}
-                    className="my-auto px-1 relative bg-black hover:bg-slate-800 text-white"
+                    className="my-auto px-2 relative bg-black hover:bg-slate-800 text-white"
                     style={{ borderRadius: "50%", height: "40px" }}
                   >
                     <svg
