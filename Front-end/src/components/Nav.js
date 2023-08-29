@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import { useState } from "react";
 import "./Components.css";
 
+
 export default function Nav() {
   const logo = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg";
 
@@ -45,8 +46,7 @@ export default function Nav() {
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
                   className="flex items-center text-sm justify-between w-full mx-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
-                >
-                  Categories
+                > Categories
                 </button>
                 <div
                   id="dropdownHover"
@@ -478,7 +478,7 @@ export default function Nav() {
                       <input
                         type="search"
                         id="default-search"
-                        style={{width: '320px'}}
+                        style={{ width: '320px' }}
                         className="block py-3 px-4 pl-10 text-sm text-gray-900 border border-gray-900 rounded-full bg-gray-50 focus:outline-none"
                         placeholder="Search for anything"
                         required
@@ -496,18 +496,18 @@ export default function Nav() {
                   Udemy Business
                 </Link>
                 <div id="tooltip-no-arrow" role="tooltip" className="absolute max-w-sm z-10 invisible inline-block px-3 py-2 text-lg font-bold text-black bg-white rounded-lg shadow-sm opacity-0 tooltip">
-                   <div className="text-center">
+                  <div className="text-center">
                     <h1>Get your team access to over 22,000 top Udemy courses, anytime, anywhere.</h1>
                     <button className="bg-black my-2 p-2 text-white hover:bg-slate-800">Try Udemy Business</button>
-                   </div>
+                  </div>
                 </div>
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/contact"
                   className="text-sm block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
-                  Tech on Udemy
+                  Contact
                 </Link>
               </li>
               <li>
@@ -539,11 +539,12 @@ export default function Nav() {
                   Log in
                 </button>
                 <button
-                  style={{ backgroundColor: "black" }}
-                  className="px-4 py-2 mx-3 my-2 text-white"
+                  style={{ backgroundColor: "black", color: "white", transition: "background-color 0.3s, color 0.3s" }}
+                  className="px-4 py-2 mx-3 my-2 text-white hover:bg-white hover:text-black"
                 >
                   Sign up
                 </button>
+
               </li>
               <li
                 style={{ border: "1px solid black" }}
