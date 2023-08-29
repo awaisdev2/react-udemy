@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 
-const port = 5000
+const port = 7000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.post('/contact', (req, res) => {
+  console.log(req.body);
+  res.send(req.body);
 });
 
 app.listen(port, () => {

@@ -9,7 +9,7 @@ export default function Nav() {
 
   return (
     <div>
-      <nav className="bg-white shadow-xl border-gray-200">
+      <nav className="bg-white shadow-lg border-gray-200">
         <div className="max-w-screen-2xl flex justify-center flex-wrap p-1 nav items-center">
           <Link to="/" className="flex items-center">
             <img src={logo} className="h-8 mr-3" alt="Flowbite Logo" />
@@ -452,7 +452,7 @@ export default function Nav() {
                 <Link to="/" className="block mx-3 my-2 w-full">
                   <form>
                     <label
-                      for="default-search"
+                      htmlFor="default-search"
                       className="mb-2 text-sm font-medium text-gray-900 sr-only"
                     >
                       Search
@@ -561,15 +561,15 @@ export default function Nav() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M6.487 1.746c0 4.192 3.592 1.66 4.592 5.754 0 .828 1 1.5 2 1.5s2-.672 2-1.5a1.5 1.5 0 0 1 1.5-1.5h1.5m-16.02.471c4.02 2.248 1.776 4.216 4.878 5.645C10.18 13.61 9 19 9 19m9.366-6h-2.287a3 3 0 0 0-3 3v2m6-8a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>
                 <div
                   id="popup-modal"
-                  tabindex="-1"
+                  tabIndex="-1"
                   className="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
                 >
                   <div className="relative max-h-full">
@@ -588,9 +588,9 @@ export default function Nav() {
                         >
                           <path
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
                           />
                         </svg>
