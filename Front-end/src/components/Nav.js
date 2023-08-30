@@ -533,17 +533,17 @@ export default function Nav() {
                 </Link>
               </li>
               <li>
-                <button
-                  className="border hover:bg-gray-200 border-black px-4 my-2 py-2"
+                <Link to='/login'
+                  className="border hover:bg-gray-200 border-black px-4 my-2 py-3"
                 >
                   Log in
-                </button>
-                <button
+                </Link>
+                <Link to='/contact'
                   style={{ backgroundColor: "black", color: "white", transition: "background-color 0.3s, color 0.3s" }}
-                  className="px-4 py-2 mx-3 my-2 text-white hover:bg-white hover:text-black"
+                  className="px-4 py-3 mx-3 my-2 text-white hover:bg-white hover:text-black"
                 >
                   Sign up
-                </button>
+                </Link>
 
               </li>
               <li
