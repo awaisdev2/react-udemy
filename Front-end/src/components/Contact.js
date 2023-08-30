@@ -1,15 +1,15 @@
 /* eslint-disable no-restricted-globals */
 import React from "react";
 import { Formik, Field, ErrorMessage, Form } from "formik";
-// import * as Yup from "yup";
+import * as Yup from "yup";
 import { Link } from "react-router-dom";
 
 export default function Contact() {
-  // let userSchema = Yup.object({
+  // const userSchema = Yup.object({
   //   first_name: Yup.string()
   //     .required("First name is required")
   //     .min(3, "First name must be at least 3 characters"),
-  //   last_name: Yup.string()
+  //   last_name: Yup.string() 
   //     .required("Last name is required")
   //     .min(3, "Last name must be at least 3 characters"),
   //   email: Yup.string().email().required("Email is required"),
@@ -24,7 +24,6 @@ export default function Contact() {
   //     .required("Phone number is required"),
   //     website: Yup.string().url("Invalid URL format").optional(),
   //   address: Yup.string().required("Address is required").min(10, "Address should be at least 10 characters").max(30, "Address should not exceed 30 characters")
-
   // });
 
   const handleSubmit = (values, {resetForm}) => {
@@ -40,10 +39,10 @@ export default function Contact() {
           alert("Data saved successfully!");
       })
       .catch((error) => {
-        alert("Error:", error.status);
+        alert("Error:", error.message);
       }).finally(() => {
-        resetForm();
-      });
+      resetForm();
+    });
   };
 
   return (
