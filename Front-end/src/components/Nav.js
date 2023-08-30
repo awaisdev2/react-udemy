@@ -489,19 +489,13 @@ export default function Nav() {
               </li>
               <li>
                 <Link
-                  to=""
-                  data-tooltip-target="tooltip-no-arrow"
+                  to="/about"
                   className="text-sm block text-gray-900 mr-4 my-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
-                  Udemy Business
+                  About Us
                 </Link>
-                <div id="tooltip-no-arrow" role="tooltip" className="absolute max-w-sm z-10 invisible inline-block px-3 py-2 text-lg font-bold text-black bg-white rounded-lg shadow-sm opacity-0 tooltip">
-                  <div className="text-center">
-                    <h1>Get your team access to over 22,000 top Udemy courses, anytime, anywhere.</h1>
-                    <button className="bg-black my-2 p-2 text-white hover:bg-slate-800">Try Udemy Business</button>
-                  </div>
-                </div>
               </li>
+           
               <li>
                 <Link
                   to="/contact"

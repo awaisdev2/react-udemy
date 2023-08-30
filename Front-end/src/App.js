@@ -7,6 +7,7 @@ import CourseIndex from "./components/courses/CourseIndex";
 import Reviewers from "./components/Reviewers";
 import Instructor from "./components/Instructor";
 import Terms from "./components/Terms";
+import About from "./components/About";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/terms" element={<Terms />} />
           {/* Add more routes as needed */}
         </Routes>
