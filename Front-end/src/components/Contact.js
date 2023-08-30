@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-globals */
 import React from "react";
 import { Formik, Field, ErrorMessage, Form } from "formik";
-import * as Yup from "yup";
-import { Link } from "react-router-dom";
+// import * as Yup from "yup";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Contact() {
   // const userSchema = Yup.object({
@@ -26,7 +26,8 @@ export default function Contact() {
   //   address: Yup.string().required("Address is required").min(10, "Address should be at least 10 characters").max(30, "Address should not exceed 30 characters")
   // });
 
-  const handleSubmit = (values, {resetForm}) => {
+  const navigate = useNavigate();
+  const handleSubmit = (values) => {
     console.log("$$", "values");
     fetch("http://localhost:7000/contact", {
       method: "POST",
@@ -35,14 +36,18 @@ export default function Contact() {
       },
       body: JSON.stringify(values),
     })
-      .then(() => {
+      .then((response) => {
+         if(response.status === 200) {
           alert("Data saved successfully!");
+          navigate('/')
+         }
+         else {
+          alert("Error: Something went wrong!");
+         }
       })
       .catch((error) => {
-        alert("Error:", error.message);
-      }).finally(() => {
-      resetForm();
-    });
+        alert("Error:" + error);
+      })
   };
 
   return (

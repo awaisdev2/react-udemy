@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -10,57 +11,57 @@ export default function Footer() {
         <div>
             <ul className="text-white text-sm">
                 <li className="mb-1">
-                    <a href="/" className=" hover:underline">Udemy Businessy</a>
+                    <p className="cursor-pointer hover:underline">Udemy Businessy</p>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className=" hover:underline">Teach on Udemy</a>
+                    <p className="cursor-pointer hover:underline">Teach on Udemy</p>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">Get the app</a>
+                    <p className="cursor-pointer hover:underline">Get the app</p>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">About us</a>
+                    <Link to='/' className="cursor-pointer hover:underline">About us</Link>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">Contact us</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <ul className="text-white text-sm">
-                <li className="mb-1">
-                    <a href="/" className="hover:underline">Careers</a>
-                </li>
-                <li className="mb-1">
-                    <a href="/" className="hover:underline">Blog</a>
-                </li>
-                <li className="mb-1">
-                    <a href="/" className="hover:underline">Help and Support</a>
-                </li>
-                <li className="mb-1">
-                    <a href="/" className="hover:underline">Affiliate</a>
-                </li>
-                <li className="mb-1">
-                    <a href="/" className="hover:underline">Investors</a>
+                    <Link to='/contact' className="cursor-pointer hover:underline">Contact us</Link>
                 </li>
             </ul>
         </div>
         <div>
             <ul className="text-white text-sm">
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">Terms</a>
+                    <p className="cursor-pointer hover:underline">Careers</p>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">Privacy Policy</a>
+                    <p className="cursor-pointer hover:underline">Blog</p>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">Cookie Settings</a>
+                    <p className="cursor-pointer hover:underline">Help and Support</p>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">Sitemap</a>
+                    <p className="cursor-pointer hover:underline">Affiliate</p>
                 </li>
                 <li className="mb-1">
-                    <a href="/" className="hover:underline">Accessibility statement</a>
+                    <p className="cursor-pointer hover:underline">Investors</p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul className="text-white text-sm">
+                <li className="mb-1">
+                    <Link to='/terms' className="cursor-pointer hover:underline">Terms</Link>
+                </li>
+                <li className="mb-1">
+                    <p className="cursor-pointer hover:underline">Privacy Policy</p>
+                </li>
+                <li className="mb-1">
+                    <p className="cursor-pointer hover:underline">Cookie Settings</p>
+                </li>
+                <li className="mb-1">
+                    <p className="cursor-pointer hover:underline">Sitemap</p>
+                </li>
+                <li className="mb-1">
+                    <p className="cursor-pointer hover:underline">Accessibility statement</p>
                 </li>
             </ul>
         </div>
